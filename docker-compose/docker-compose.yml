@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  dev:
+    build:
+      context: ../Dockerfile
+      dockerfile: Dockerfile
+    image: fastapi:0.101.0
+    container_name: fastapi_authenticate
+    volumes:
+      - ../src:/app/src
+    working_dir: /app
+    ports:
+      - "7870:5000"
+    tty: true
+    # entrypoint: sh -c "cd /app/src && uvicorn main:app --host 0.0.0.0 --reload --port 5000"
