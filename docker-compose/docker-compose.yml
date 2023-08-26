@@ -9,6 +9,8 @@ services:
     container_name: fastapi_authenticate
     volumes:
       - ../src:/app/src
+      - ../test:/app/test
+      - ../pytest.ini:/app/pytest.ini
     working_dir: /app
     ports:
       - "7870:5000"
