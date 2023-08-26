@@ -13,4 +13,4 @@ services:
     ports:
       - "7870:5000"
     tty: true
-    # entrypoint: sh -c "cd /app/src && uvicorn main:app --host 0.0.0.0 --reload --port 5000"
+    entrypoint: sh -c "cd /app/src && uvicorn basic_auth:app --host 0.0.0.0 --reload --port 5000"
